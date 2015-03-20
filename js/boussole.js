@@ -6,7 +6,7 @@ $(document).ready(function(){
 // device APIs are available
 //
 function onDeviceReady() {
-
+	$('#debug').html('deviceReady !');
 	var compassSuccess=function(heading) {
 		$('#debug').html(heading.magneticHeading);
 		$('#disk').css('transform','rotate('+(-1*parseInt(heading.magneticHeading))+'deg)');
