@@ -12,14 +12,16 @@ if($(window).width() < 420)
 		{
 			$('#inbox .show-on-hover:hover > ul.dropdown-menu').show();
 		}
-		$('.fab-primary').css({
-			'opacity': '0',
-			'transform': 'rotate(225deg)'
-		});
-    	$('.fab-secondary').css({
-    		'opacity': '1',
-    		'transform': 'rotate(0)',
-    		'marginTop': '-2px'
+		$(this).toggle(function(){
+			$('.fab-primary').css({
+				'opacity': '0',
+				'transform': 'rotate(225deg)'
+			});
+	    	$('.fab-secondary').css({
+	    		'opacity': '1',
+	    		'transform': 'rotate(0)',
+	    		'marginTop': '-2px'
+  			})
   		})
 	});
 }
