@@ -1,0 +1,19 @@
+#disk
+{
+	background-color: #F5F5F5;
+	width: 400px;
+	height: 400px;
+	border-radius: 200px;
+	overflow: hidden;
+}
+
+#needle
+{
+	width: 10px;
+	height: 400px;
+	border-top: solid 200px transparent;
+	border-bottom: solid 200px black;
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+	margin : -200px 200px 0 200px;
+}
