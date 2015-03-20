@@ -28,12 +28,10 @@ if($(window).width() < 420)
 	  	else {
 	  		$('.fab-primary').css({
 				'opacity': '1',
-				'transform': 'rotate(-225deg)'
+				'transform': 'rotate(0)'
 			});
 	    	$('.fab-secondary').css({
-	    		'opacity': '0',
-	    		'transform': 'rotate(0)',
-	    		'marginTop': '-2px'
+	    		'opacity': '0'
 	  		})
 	  	}
 	});
@@ -41,3 +39,5 @@ if($(window).width() < 420)
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+
