@@ -4,7 +4,7 @@ var destinationType; // sets the format of returned value
     // Wait for device API libraries to load
     //
     document.addEventListener("deviceready",onDeviceReady,false);
-
+alert('toto');
     // device APIs are available
     //
     function onDeviceReady() {
