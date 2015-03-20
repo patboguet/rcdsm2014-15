@@ -1,0 +1,30 @@
+/*
+	REFERENCE CSS
+	http://www.w3schools.com/cssref/
+
+	Niveau à bulle
+*/
+
+/*
+  HTML: <x id="toto">...</x>
+  CSS: #toto {....}
+*/
+
+#wrapper {
+	margin:0 auto; /* centrage au milieu de la page */
+	width:80%;
+	height:25%;
+}
+
+#niveau {
+	background-color:yellow;
+	width:330px;
+	height:50px;
+}
+
+#bulle {
+	background-color:green;
+	width:30px;
+	height:30px;
+	border-radius:15px;
+}
