@@ -12,7 +12,45 @@
         <link href="../css/boussole.css" rel="stylesheet">
         <link href="../css/inbox.css" rel="stylesheet">
         <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
         
+<script language="javascript" type="text/javascript">
+    function init() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    };
+
+
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        
+        var compassSuccess=function(heading) {
+            //$('#debug').html(heading.magneticHeading);
+            $('#disk').css('transform','rotate('+(-1*parseInt(heading.magneticHeading))+'deg)');
+            
+            setTimeout(getCompass,250);
+            
+            return;
+        };
+        var compassError=function(compassError) {
+            setTimeout(getCompass,250);
+            //alert('Compass error: ' + compassError.code);
+            return;
+        };
+        
+        
+        
+        function getCompass()
+        {
+            if(navigator.compass) {
+                navigator.compass.getCurrentHeading(compassSuccess, compassError);
+            }
+        }
+        getCompass();
+    };
+</script>
     </head>
     <body>
         <div class="container">
@@ -62,6 +100,6 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/inbox.js"></script>
-        <script src="../js/boussole.js"></script>
+        <!--script src="../js/boussole.js"></script-->
     </body>
 </html>
