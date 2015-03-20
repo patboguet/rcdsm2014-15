@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	document.addEventListener("deviceready", onDeviceReady, false);
-	alert('toto');
 });
 
 
@@ -9,7 +8,7 @@ $(document).ready(function(){
 function onDeviceReady() {
 
 	var compassSuccess=function(heading) {
-		//$('#debug').html(heading.magneticHeading);
+		$('#debug').html(heading.magneticHeading);
 		$('#disk').css('transform','rotate('+(-1*parseInt(heading.magneticHeading))+'deg)');
 		
 		setTimeout(getCompass,250);
