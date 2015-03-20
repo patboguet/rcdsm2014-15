@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	document.addEventListener("deviceready", onDeviceReady, false);
+	$('#debug').html('Document Ready !');
 });
 
 
