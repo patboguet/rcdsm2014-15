@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Game</title>
+<script type="text/javascript" src="cordova.js"></script>
+		<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+        <style>
+			body,html,* {
+				padding:0;
+				margin:0;
+			}
+			#disk {
+				width:100px;
+				height:100px;
+				border-radius:50px;
+				background-color:gray;
+			}
+			
+			
+			#north {
+				margin:0 auto;
+				width: 0px;
+				height: 0px;
+				border-style: solid;
+				border-width: 0 5px 50px 5px;
+				border-color: transparent transparent #ff0000 transparent;
+			}
+		</style>
+<script language="javascript" type="text/javascript">
+	function init() {
+		document.addEventListener("deviceready", onDeviceReady, false);
+	};
+
+
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+		
+		var compassSuccess=function(heading) {
+			//$('#debug').html(heading.magneticHeading);
+			$('#disk').css('transform','rotate('+(-1*parseInt(heading.magneticHeading))+'deg)');
+			
+			setTimeout(getCompass,250);
+			
+			return;
+		};
+		var compassError=function(compassError) {
+			setTimeout(getCompass,250);
+			//alert('Compass error: ' + compassError.code);
+			return;
+		};
+		
+		
+		
+		function getCompass()
+		{
+			if(navigator.compass) {
+				navigator.compass.getCurrentHeading(compassSuccess, compassError);
+			}
+		}
+		getCompass();
+	};
+</script>
+</head>
+
+<body onload="init()">
+	<div id="debug">...</div>
+	<div id="disk">
+		<div id="north"></div>
+	</div>
+</body>
+</html>
