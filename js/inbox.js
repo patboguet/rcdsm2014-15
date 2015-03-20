@@ -22,6 +22,16 @@ if($(window).width() < 420)
 	    		'transform': 'rotate(0)',
 	    		'marginTop': '-2px'
   			})
+  		},function(){
+  			$('.fab-secondary').css({
+				'opacity': '0',
+				'transform': 'rotate(225deg)'
+			});
+	    	$('.fab-primary').css({
+	    		'opacity': '1',
+	    		'transform': 'rotate(0)',
+	    		'marginTop': '2px'
+  			})
   		})
 	});
 }
