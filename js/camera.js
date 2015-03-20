@@ -8,6 +8,7 @@ var destinationType; // sets the format of returned value
     // device APIs are available
     //
     function onDeviceReady() {
+      window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(){ alert('filesystem ok'); }, function(msg) { alert('Error persitent mode'); });
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
     }
