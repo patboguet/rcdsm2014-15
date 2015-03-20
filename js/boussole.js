@@ -1,6 +1,6 @@
-function init(){
+$(document).ready(function(){
 	document.addEventListener("deviceready", onDeviceReady, false);
-}
+});
 
 
 // device APIs are available
