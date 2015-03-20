@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Phonegap APP!</title>
+
+        <!-- Bootstrap stylesheet-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/boussole.css" rel="stylesheet">
+        <link href="../css/inbox.css" rel="stylesheet">
+        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+        <script type="text/javascript" src="cordova.js"></script>
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div id="inbox">
+                    <div class="fab btn-group show-on-hover dropup">
+                        <div data-toggle="tooltip" data-placement="left" title="Menu" style="margin-left: 42px;">
+                            <button type="button" class="btn btn-danger btn-io dropdown-toggle" data-toggle="dropdown">
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x fab-backdrop"></i>
+                                    <i class="fa fa-plus fa-stack-1x fa-inverse fab-primary"></i>
+                                    <i class="fa fa-times fa-stack-1x fa-inverse fab-secondary"></i>
+                                </span> 
+                            </button>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li>
+                                <a href="camera.html" data-toggle="tooltip" data-placement="left" title="Camera">
+                                    <i class="glyphicon glyphicon-picture"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="tooltip" data-placement="left" title="Boussole">
+                                    <i class="glyphicon glyphicon-map-marker"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="formulaire.html" data-toggle="tooltip" data-placement="left" title="Formulaire">
+                                    <i class="glyphicon glyphicon-list-alt"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../index.html" data-toggle="tooltip" data-placement="left" title="Accueil">
+                                    <i class="glyphicon glyphicon-home"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="disk">
+                <div id="needle"></div>
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../js/jquery-1.11.2.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/inbox.js"></script>
+        <script src="../js/boussole.js"></script>
+    </body>
+</html>
