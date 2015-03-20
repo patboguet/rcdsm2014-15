@@ -1,0 +1,112 @@
+<html>
+	<!-- NIVEAU A BULLE -->
+	
+	<head>
+		<link rel="stylesheet" href="js/jquery.mobile-1.4.2.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+		<script language="javascript" src="js/jquery.js"></script><script language="javascript" src="js/localstorage.js"></script><script language="javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+       
+	</head>
+	
+	<body>
+    
+        <!-- debut page new -->
+        <div data-role="page" id="list" data-defaults="true">
+            <div data-role="header" data-position="fixed">
+              <h1>Liste des notes</h1>
+            </div>
+            <div role="main" class="ui-content">
+            
+            	<ul id="notes"><li>Chargement en cours...</li></ul>
+            
+            
+            </div>
+            <div data-role="footer" data-position="fixed">
+           		<div data-role="navbar" data-iconpos="top">
+                    <ul>
+                    	<li><a href="" data-icon="bullets">Liste</a></li>
+                        <li><a href="#new" data-icon="plus">Ajouter</a></li>
+                        <li><a href="#param" data-icon="gear">Paramètres</a></li>
+                    </ul>
+                </div>  
+            </div>        	
+        </div>
+        <!-- fin page new -->
+        
+        
+        <div data-role="page" id="new">
+        	<div data-role="header">
+            	<a href="#list" data-icon="carat-l">Liste</a>
+                <h1>Nouvelle note</h1>
+           </div>
+           <div role="main" class="ui-content">
+           
+           <form>
+			<input id="key" />
+				<p>
+					<label>Note : </label>
+					<textarea id="comment"></textarea>
+				</p>
+				<p>
+					<label>Couleur : </label>
+					<select id="color">
+						<option value="rgb(255,0,0)">Rouge</option>
+						<option value="rgb(0,255,0)">Vert</option>
+						<option value="rgb(0,0,255)">Bleu</option>
+					</select>
+				</p>
+				<p>
+					<label>Catégorie : </label>
+					<select id="category">
+					</select>
+				</p>
+				<p>
+					<button id="save">Enregistrer</button>
+				</p>
+			</form>
+           
+           </div>
+            <div data-role="footer" data-position="fixed">
+           		<div data-role="navbar" data-iconpos="top">
+                    <ul>
+                    	<li><a href="#list" data-icon="bullets" data- checked="checked">Liste</a></li>
+                        <li><a href="" data-icon="plus">Ajouter</a></li>
+                        <li><a href="#param" data-icon="gear">Paramètres</a></li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+        <div data-role="page" id="param">
+        	<div data-role="header">
+            	<a href="#list" data-icon="carat-l">Liste</a>
+                <h1>Paramètres</h1>
+           </div>
+        
+           <div role="main" class="ui-content">
+           
+           <form>
+				<p>
+					<label>Nom : </label>
+					<input id="category_name" value="" />
+				</p>
+				<p>
+					<button id="newCategory">Ajouter</button>
+				</p>
+			</form>
+           
+           </div>
+            <div data-role="footer" data-position="fixed">
+           		<div data-role="navbar" data-iconpos="top">
+                    <ul>
+                    	<li><a href="#list" data-icon="bullets">Liste</a></li>
+                        <li><a href="#new" data-icon="plus">Ajouter</a></li>
+                        <li><a href="" data-icon="gear" data-checked="true">Paramètres</a></li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+       
+       
+		
+	</body>
+</html>
