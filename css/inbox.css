@@ -12,28 +12,34 @@ body{
 .fab-primary, .fab-secondary {
   transition: all 0.35s ease-in-out;
 }
-.fab.active .fab-primary {
-  opacity: 0;
-  transform: rotate(225deg);
+
+@media screen and (min-width: 420px) {
+  
+  .fab.active .fab-primary {
+    opacity: 0;
+    transform: rotate(225deg);
+  }
+  .fab.active .fab-secondary {
+    opacity: 1;
+    transform: rotate(0);
+    margin-top: -2px;
+  }
+
+  #inbox .show-on-hover:hover > ul.dropdown-menu {
+    display: block;
+}    
+    
 }
 .fab-secondary {
   opacity: 0;
   transform: rotate(-225deg);
 }
-.fab.active .fab-secondary {
-  opacity: 1;
-  transform: rotate(0);
-  margin-top: -2px;
-}
 
-#inbox .show-on-hover:hover > ul.dropdown-menu {
-    display: block;    
-    
-}
+
 #inbox .show-on-hover {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 5px;
+    left: 5px;
 }
 #inbox .btn-io{
     border-radius: 50%;

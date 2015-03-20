@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).addEventListener('deviceready',function(){
 
 	var watchID = navigator.compass.watchHeading(
 		function(direction){
@@ -7,4 +7,4 @@ $(document).ready(function(){
 		function(){
 			alert('erreur !');
 		});
-});
+},false);
